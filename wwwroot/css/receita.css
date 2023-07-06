@@ -15,7 +15,6 @@
 }
 
 .card-header {
-    
     background-color: #007bff;
 }
 
@@ -23,27 +22,43 @@
     background-color: #ffffff90;
 }
 
-.card-body-edit-prescription {
-    width: 100%;
-}
-
-.card-body-edit-prescription p {
+.prescription-form input {
+    width: 50vh;
     margin-left: 8vh;
 }
 
-.card-body-edit-prescription label {
-    text-align: left;
+.prescription-card-body label {
     margin-left: 8vh;
+}
+
+.btn-printer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.button-prescription {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.btn-printer-p span {
+    margin-right: 5%;
+}
+
+.btn-printer span {
+    margin-right: 6px;
 }
 
 .show-prescription {
-    width: 10vh;
-    margin-bottom: 1.9%;
-    position: relative;
-    box-shadow: 8px 10px 8px rgba(0 0 0 / 80%);
-    background-color: #fff;
-    margin-top: 2%;
-    border: 1px solid #007bff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.441);
     border-radius: 1%;
 }
 
@@ -51,7 +66,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 2.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 .header-img {
@@ -125,11 +141,6 @@
     margin-left: 1%;
 }
 
-.prescription-form input {
-    width: 50vh;
-    margin-left: 8vh;
-}
-
 .medic-btn:hover {
     cursor: not-allowed;
 }
@@ -142,38 +153,6 @@
 .medicine-card-2 p {
     text-align: justify;
     margin-bottom: 0%;
-}
-
-.btn-printer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-}
-
-.button-prescription {
-    width: 93%;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-}
-
-.btn-printer-edit {
-    width: 7em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-}
-
-.btn-printer-p span {
-    margin-right: 5%;
-}
-
-.btn-printer span {
-    margin-right: 6px;
 }
 
 .edit-button {

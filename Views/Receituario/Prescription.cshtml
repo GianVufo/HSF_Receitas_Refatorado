@@ -25,7 +25,7 @@
 
                     <h5 class="card-header font-weight-bold">Informações básicas :</h5>
 
-                    <div class="card-body card-body-edit-prescription">
+                    <div class="card-body prescription-card-body">
 
                         <input id="prescriptionId" class="form-control mb-3" type="hidden" asp-for="Id" disabled>
 
@@ -46,19 +46,21 @@
 
                 </div>
 
-                <div class="card medicine-card">
+                <div class="card text-light border-primary">
 
-                    <h5 class="card-header">Medicações :</h5>
+                    <h5 class="card-header font-weight-bold">Medicações :</h5>
 
                     <div class="card-body">
 
                         <p class="text-danger ml-3">Salve a receita para inserir medicamentos.</p>
 
                         <div class="row button-prescription">
+
                             <button target type="button" title="Salve a receita para adicionar medicamentos." class="btn btn-sm btn-info btn-printer medic-btn" disabled>
+                                
                             <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos </button>
 
-                            <button title="Salve a receita para imprimir." class="btn btn-sm btn-secondary btn-printer-edit medic-btn" disabled><span class="material-symbols-outlined mr-2"> print </span> Imprimir </button>
+                            <button title="Salve a receita para imprimir." class="btn btn-sm btn-secondary btn-printer medic-btn" disabled><span class="material-symbols-outlined mr-2"> print </span> Imprimir </button>
                                 
                         </div>
 
@@ -72,7 +74,7 @@
 
     </div>
 
-    <div class="show-prescription col-md-5">
+    <div class="card show-prescription col-md-5 border-primary mb-4">
 
         <div class="header-show-prescription">
 
