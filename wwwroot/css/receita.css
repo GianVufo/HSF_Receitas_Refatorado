@@ -1,3 +1,5 @@
+/*Estilização da View Prescription*/
+
 .prescription {
     display: flex;
     flex-direction: row;
@@ -54,72 +56,56 @@
     margin-right: 6px;
 }
 
-.show-prescription {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.441);
-    border-radius: 1%;
+.medic-btn:hover {
+    cursor: not-allowed;
+}
+
+.edit-button {
+    margin-left: 6vh;
+}
+
+.edit-button button {
+    width: 20vh;
 }
 
 .header-show-prescription {
+    width: 97%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
-}
-
-.header-img {
-    width: 35%;
-    margin-left: 5%;
+    justify-content: space-evenly;
 }
 
 .header-img img {
-    width: 16vh;
-    height: 9vh;
+    width: 23vh;
+    height: 13vh;
+    margin: 2.5vh;
 }
 
 .show-logo {
     display: flex;
     flex-direction: column;
-    width: 98%;
-    background-color: #fff;
-    padding: 0;
     text-align: center;
-    margin-left: -2%;
+    margin: 3vh;
 }
 
 .show-logo h1 {
-    font-size: 3.5vh;
+    font-size: 3.2vh;
     font-weight: bold;
     color: #007bff;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .show-logo h2 {
-    font-size: 2.5vh;
+    font-size: 2.2vh;
     font-weight: bold;
     color: #007bff;
-}
-
-.table-medicament-bottom {
-    margin-bottom: 10vh;
-}
-
-.line {
-    width: 85%;
-    height: 2px;
-    background-color: #007bff;
-    margin-top: -1.5%;
-    margin-bottom: 5%;
 }
 
 .prescription-data {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1%;
 }
 
 .inputs {
@@ -141,71 +127,18 @@
     margin-left: 1%;
 }
 
-.medic-btn:hover {
-    cursor: not-allowed;
-}
-
-.medicine-card-2 {
-    width: 100%;
-    margin: 0%;
-}
-
-.medicine-card-2 p {
-    text-align: justify;
-    margin-bottom: 0%;
-}
-
-.edit-button {
-    margin-left: 6vh;
-}
-
-.edit-button button {
-    width: 20vh;
-}
-
-.medicacoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0%;
-    margin-bottom: 12vh;
-}
-
-.list-visualization {
-    margin-bottom: 2em;
-}
-
-.list-visualization tr>th:first-child,
-.list-visualization tr>th:nth-child(1),
-.list-visualization tr>th:nth-child(2),
-.list-visualization tr>th:nth-child(3),
-.list-visualization tr>th:nth-child(4) {
-    width: 1%;
-    white-space: nowrap;
-    text-align: center;
-}
-
-.list-visualization tr>td:first-child,
-.list-visualization tr>td:nth-child(1),
-.list-visualization tr>td:nth-child(2),
-.list-visualization tr>td:nth-child(3),
-.list-visualization tr>td:nth-child(4) {
-    height: 1%;
-    white-space: nowrap;
-    text-align: center;
-}
-
 .show-footer {
-    width: 100%;
-    line-height: 0.5em;
     display: flex;
     flex-direction: column;
     position: absolute;
-    bottom: 0;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 12vh;
+    line-height: 0.5em;
     font-size: 1.8vh;
-    margin-left: -2%;
+    bottom: 0;
+    padding: 0%;
 }
 
 .show-footer p {
@@ -216,13 +149,53 @@
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    body {
-        width: 100%;
-        height: 100%;
-    }
+/*Fim da estilização da View Prescription*/
 
-    .logo-img {
-        display: none;
-    }
+
+
+/*Estilização da View CreatePrescription*/
+
+
+
+.line {
+    width: 85%;
+    height: 2px;
+    background-color: #007bff;
+}
+
+.medicacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12vh;
+}
+
+.list-visualization tr>th:first-child,
+.list-visualization tr>th:nth-child(2),
+.list-visualization tr>th:nth-child(3),
+.list-visualization tr>th:nth-child(4),
+.list-visualization tr>th:nth-child(5),
+.list-visualization tr>th:nth-child(6)  {
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.list-visualization tr>td:first-child,
+.list-visualization tr>td:nth-child(2),
+.list-visualization tr>td:nth-child(3),
+.list-visualization tr>td:nth-child(4),
+.list-visualization tr>td:nth-child(5),
+.list-visualization tr>td:nth-child(6) {
+    height: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/*Fim da estilização da View CreatePrescription*/
+
+/*@media*/
+
+@media (max-width: 768px) {
+    
 }
