@@ -37,7 +37,7 @@
                     <div class="card-body prescription-card-body">
 
                         <input id="up-prescriptionId" class="form-control mb-3 addRec-prescriptionId" type="hidden" asp-for="Id"
-                         disabled>
+                        disabled>
 
                         <label class="text-primary" for="up-pacientName">Nome do Paciente: </label>
                         <input type="text" id="up-pacientName" class="form-control border-primary mb-3"
@@ -75,10 +75,7 @@
 
                         <div class="row button-prescription">
 
-                            <button type="button" data-toggle="modal" data-target="#medication-modal-@Model.Id"
-                            title="Inserir medicamentos à receita" onclick=" inserirRemedios()"
-                            class="btn btn-sm btn-info btn-printer"> <span class="material-symbols-outlined">
-                            syringe </span> Adicionar Medicamentos</button>
+                            <button type="button" data-toggle="modal" data-target="#medication-modal-@Model.Id" title="Inserir medicamentos à receita" onclick="inserirRemedios()" class="btn btn-sm btn-info btn-printer"> <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos</button>
 
                             @if(medicList.Count() <= 0)
                             {

@@ -149,19 +149,16 @@
     font-weight: bold;
 }
 
-/*Fim da estilização da View Prescription*/
-
-
-
-/*Estilização da View CreatePrescription*/
-
-
-
 .line {
     width: 85%;
     height: 2px;
     background-color: #007bff;
 }
+
+/*Fim da estilização da View Prescription*/
+
+
+/*Estilização da View CreatePrescription*/
 
 .medicacoes {
     display: flex;

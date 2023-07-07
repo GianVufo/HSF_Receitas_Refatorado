@@ -1082,8 +1082,6 @@ C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3
 C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3.1\Razor\Views\Medicacao\_ListaDeMedicacao.cshtml.g.cs
 C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3.1\Razor\Views\Medicacao\_MedicationRegister.cshtml.g.cs
-C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3.1\Razor\Views\Medicacao\_MedicationRegisterATC.cshtml.g.cs
-C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3.1\Razor\Views\Medicacao\_MedicationRegisterATM.cshtml.g.cs
 C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3.1\Razor\Views\Receituario\CompletePrescription.cshtml.g.cs
 C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3.1\Razor\Views\Receituario\Prescription.cshtml.g.cs
 C:\Users\Administrador\Desktop\Nova pasta (2)\HSF_Receitas\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
