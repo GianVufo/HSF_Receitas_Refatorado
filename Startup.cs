@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Hsf_Receitas.Services;
+using Hsf_Receitas.Data;
 
 namespace Hsf_Receitas
 {
@@ -37,6 +38,7 @@ namespace Hsf_Receitas
             services.AddScoped<ReceituarioServices>();
             services.AddScoped<AtestadoMedicoServices>();
             services.AddScoped<AtestadoComparecimentoServices>();
+            services.AddScoped<HSFContext>();
 
         }
 

@@ -43,8 +43,7 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                AtestadoMedicoServices medServ = new AtestadoMedicoServices();
-                medServ.AddATM(novoATM);
+                _AtestadoMedicoServices.AddATM(novoATM);
 
                 return Json(new { stats = "OK" });
             }
@@ -62,7 +61,7 @@ namespace Hsf_Receitas.Controllers
 
         public IActionResult ATMCompletePrescription(int id)
         {
-            Receituario buscaReceita = new ReceituarioServices().SearchForId(id);
+            Receituario buscaReceita =  _ReceituarioServices.SearchForId(id);
             return View(buscaReceita);
         }
 
@@ -71,7 +70,7 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                new ReceituarioServices().EditReceita(editReceita);
+                _ReceituarioServices.EditReceita(editReceita);
                 return Json(new { stats = "OK" });
             }
             catch (Exception e)
@@ -92,10 +91,7 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                string reportFile = Path.Combine(
-                    _environment.WebRootPath,
-                    @"Print_Files\ATM_Report.frx"
-                );
+                string reportFile = Path.Combine(_environment.WebRootPath, @"Print_Files\ATM_Report.frx");
 
                 FastReport.Report r = new FastReport.Report();
 
@@ -136,17 +132,12 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                string reportFile = Path.Combine(
-                    _environment.WebRootPath,
-                    @"Print_Files\Rec_Atm.frx"
-                );
+                string reportFile = Path.Combine(_environment.WebRootPath, @"Print_Files\Rec_Atm.frx");
 
                 FastReport.Report r = new FastReport.Report();
 
-                ICollection<Receituario> prescriptionList =
-                    _ReceituarioServices.ListPrescriptionsForId(id);
-                ICollection<Medicacao> medicationList =
-                    _MedicacaoServices.ListMedicationPrescriptions(id);
+                ICollection<Receituario> prescriptionList = _ReceituarioServices.ListPrescriptionsForId(id);
+                ICollection<Medicacao> medicationList = _MedicacaoServices.ListMedicationPrescriptions(id);
                 ICollection<AtestadoMedico> atmList = _AtestadoMedicoServices.ListATMPrescriptions(
                     id
                 );

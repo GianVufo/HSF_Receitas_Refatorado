@@ -38,21 +38,14 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                AtestadoComparecimentoServices atcServ = new AtestadoComparecimentoServices();
-                atcServ.AddATC(novoATC);
+                _AtestadoComparecimentoServices.AddATC(novoATC);
 
                 return Json(new { stats = "OK" });
             }
             catch (Exception e)
             {
                 _logger.LogError("Erro ao adicionar atestado de comparecimento!" + e.Message);
-                return Json(
-                    new
-                    {
-                        stats = "INVALID",
-                        message = "Falha ao gerar atestado de comparecimento!"
-                    }
-                );
+                return Json(new{stats = "INVALID", message = "Falha ao gerar atestado de comparecimento!"});
             }
         }
 
@@ -63,7 +56,7 @@ namespace Hsf_Receitas.Controllers
 
         public IActionResult ATCCompletePrescription(int id)
         {
-            Receituario buscaReceita = new ReceituarioServices().SearchForId(id);
+            Receituario buscaReceita = _ReceituarioServices.SearchForId(id);
             return View(buscaReceita);
         }
 
@@ -72,21 +65,13 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                new ReceituarioServices().EditReceita(editReceita);
+                _ReceituarioServices.EditReceita(editReceita);
                 return Json(new { stats = "OK" });
             }
             catch (Exception e)
             {
-                _logger.LogError(
-                    "Erro ao completar o receituário do atestado de comparecimento!" + e.Message
-                );
-                return Json(
-                    new
-                    {
-                        stats = "INVALID",
-                        message = "Falha ao salvar alterações na receita do atestado de comprecimento!"
-                    }
-                );
+                _logger.LogError("Erro ao completar o receituário do atestado de comparecimento!" + e.Message);
+                return Json(new{stats = "INVALID", message = "Falha ao salvar alterações na receita do atestado de comprecimento!"});
             }
         }
 
@@ -95,17 +80,13 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                string reportFile = Path.Combine(
-                    _environment.WebRootPath,
-                    @"Print_Files\Rec_Atc.frx.frx"
-                );
+                string reportFile = Path.Combine( _environment.WebRootPath, @"Print_Files\Rec_Atc.frx.frx");
 
                 FastReport.Report r = new FastReport.Report();
 
                 ICollection<Medicacao> medicationList = _MedicacaoServices.ListMedication();
                 ICollection<Receituario> prescriptionList = _ReceituarioServices.ListPrescription();
-                ICollection<AtestadoComparecimento> atcList =
-                    _AtestadoComparecimentoServices.ListATC();
+                ICollection<AtestadoComparecimento> atcList = _AtestadoComparecimentoServices.ListATC();
 
                 r.Report.Dictionary.RegisterBusinessObject(
                     medicationList,
@@ -127,10 +108,7 @@ namespace Hsf_Receitas.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError(
-                    "Erro ao gerar report da receita + atestado de comparecimento via FastReporter !"
-                        + e.Message
-                );
+                _logger.LogError("Erro ao gerar report da receita + atestado de comparecimento via FastReporter !" + e.Message);
                 return RedirectToAction("Index", "Home");
             }
         }
@@ -181,9 +159,7 @@ namespace Hsf_Receitas.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError(
-                    "Erro ao gerar receita + atestado de comparecimento em PDF !" + e.Message
-                );
+                _logger.LogError("Erro ao gerar receita + atestado de comparecimento em PDF !" + e.Message);
                 return RedirectToAction("Index", "Home");
             }
         }

@@ -40,8 +40,7 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                ReceituarioServices recServ = new ReceituarioServices();
-                recServ.AddReceita(novaReceita);
+                _ReceituarioServices.AddReceita(novaReceita);
 
                 return Json(new { stats = "OK", id = novaReceita.Id });
             }
@@ -54,7 +53,7 @@ namespace Hsf_Receitas.Controllers
 
         public IActionResult CompletePrescription(int id)
         {
-            Receituario buscaReceita = new ReceituarioServices().SearchForId(id);
+            Receituario buscaReceita = _ReceituarioServices.SearchForId(id);
             return View(buscaReceita);
         }
 
@@ -63,19 +62,13 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                new ReceituarioServices().EditReceita(editReceita);
+                _ReceituarioServices.EditReceita(editReceita);
                 return Json(new { stats = "OK" });
             }
             catch (Exception e)
             {
                 _logger.LogError("Erro ao completar o receituário !" + e.Message);
-                return Json(
-                    new
-                    {
-                        stats = "INVALID",
-                        message = "Falha ao salvar alterações de receita simples!"
-                    }
-                );
+                return Json(new{stats = "INVALID", message = "Falha ao salvar alterações de receita simples!"});
             }
         }
 
@@ -84,10 +77,7 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                string reportFile = Path.Combine(
-                    _environment.WebRootPath,
-                    @"Print_Files\Medication.frx"
-                );
+                string reportFile = Path.Combine(_environment.WebRootPath, @"Print_Files\Medication.frx");
 
                 FastReport.Report r = new FastReport.Report();
 
@@ -125,17 +115,12 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                string reportFile = Path.Combine(
-                    _environment.WebRootPath,
-                    @"Print_Files\Medication.frx"
-                );
+                string reportFile = Path.Combine(_environment.WebRootPath, @"Print_Files\Medication.frx");
 
                 FastReport.Report r = new FastReport.Report();
 
-                ICollection<Receituario> prescriptionList =
-                    _ReceituarioServices.ListPrescriptionsForId(id);
-                ICollection<Medicacao> medicationList =
-                    _MedicacaoServices.ListMedicationPrescriptions(id);
+                ICollection<Receituario> prescriptionList = _ReceituarioServices.ListPrescriptionsForId(id);
+                ICollection<Medicacao> medicationList = _MedicacaoServices.ListMedicationPrescriptions(id);
 
                 r.Report.Load(reportFile);
                 r.Report.Dictionary.RegisterBusinessObject(
