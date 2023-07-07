@@ -27,8 +27,7 @@
 
                     <div class="card-body prescription-card-body">
 
-                        <input id="atm-prescriptionId" class="form-control mb-3" type="hidden" asp-for="Id"
-                        disabled>
+                        <input id="atm-prescriptionId" class="form-control mb-3" type="hidden" asp-for="Id" disabled>
 
                         <label class="text-primary" for="atm-pacientName">Nome do Paciente: </label>
                         <input type="text" id="atm-pacientName" class="form-control border-primary mb-3" asp-for="PacientName" onkeyup="ATMShowPrescriptionPacient()" onblur="ATMShowPrescriptionPacient()" required>
@@ -76,8 +75,7 @@
 
                         <p class="text-danger ml-3">Salve a receita para inserir o atestado médico.</p>
 
-                        <button target type="button" title="Salve a receita para adicionar um atestado médico."
-                            class="btn btn-sm btn-info btn-printer medic-btn ml-3" disabled>
+                        <button target type="button" title="Salve a receita para adicionar um atestado médico."  class="btn btn-sm btn-info btn-printer medic-btn ml-3" disabled>
                             <span class="material-symbols-outlined"> clinical_notes </span> Atestado Médico
                         </button>
 
