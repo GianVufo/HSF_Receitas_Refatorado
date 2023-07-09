@@ -31,3 +31,8 @@ System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address
 (Text49): Error CS0103: The name 'medicationList' does not exist in the current context
 (Text50): Error CS0103: The name 'medicationList' does not exist in the current context
  (c276e250)
+2023-07-09T14:21:55.5814740-03:00 0HMS0K38V4F8F:00000017 [ERR] Erro ao gerar receita + atestado de comparecimento em PDF !(Text16): Error CS0103: The name 'medicationList' does not exist in the current context
+(Text17): Error CS0103: The name 'medicationList' does not exist in the current context
+(Text49): Error CS0103: The name 'medicationList' does not exist in the current context
+(Text50): Error CS0103: The name 'medicationList' does not exist in the current context
+ (ef1bfa5f)
