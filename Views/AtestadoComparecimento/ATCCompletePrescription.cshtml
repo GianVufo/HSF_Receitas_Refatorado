@@ -43,11 +43,11 @@
 
                         <input id="atc-up-prescriptionId" class="form-control mb-3 addRec-prescriptionId" type="hidden" asp-for="Id" disabled>
 
-                        <label class="text-primary" for="atc-up-pacientName">Nome do Paciente: </label> <input type="text" id="atc-up-pacientName" class="form-control border-primary mb-3" asp-for="PacientName" required>
+                        <label class="text-primary" for="atc-up-pacientName">Nome do Paciente: </label> <input type="text" id="atc-up-pacientName" class="form-control line-inputs border-primary mt-0 mb-3" asp-for="PacientName" required>
 
-                        <label class="text-primary" for=" atc-up-dataAppoiment">Data da consulta: </label> <input type="date" id="atc-up-dataAppoiment" class="form-control border-primary mb-3" asp-for="DateOfMedicalAppoiment" required>
+                        <label class="text-primary" for="atc-up-doctorName">Nome do Médico: </label> <input type="text" id="atc-up-doctorName" class="form-control line-inputs border-primary mt-0 mb-3"  asp-for="DoctorName" required>
 
-                        <label class="text-primary" for="atc-up-doctorName">Nome do Médico: </label> <input type="text" id="atc-up-doctorName" class="form-control border-primary mb-3"  asp-for="DoctorName" required>
+                        <label class="text-primary" for=" atc-up-dataAppoiment">Data da consulta: </label> <input type="date" id="atc-up-dataAppoiment" class="form-control line-inputs border-primary mt-0 mb-4" asp-for="DateOfMedicalAppoiment" required>
 
                         <p class="text-danger ml-5">Salve as alterações antes de imprimir.</p>
 
@@ -423,19 +423,19 @@
 
         <div class="modal-content">
 
-            <div class="modal-header text-center">
+            <div class="modal-header bg-primary text-light text-center">
 
                 <h2 class="text-center mb-0"> Inserir Medicamento</h2>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 
-                    <span aria-hidden="true">&times;</span>
+                    <span class="text-light" aria-hidden="true">&times;</span>
 
                 </button>
 
             </div>
 
-            <div class="modal-body p-0">
+            <div class="modal-body p-3">
                 @await Html.PartialAsync("/Views/Medicacao/_MedicationRegister.cshtml", @medic)
             </div>
 
