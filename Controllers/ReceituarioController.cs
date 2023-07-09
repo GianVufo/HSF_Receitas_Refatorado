@@ -41,7 +41,6 @@ namespace Hsf_Receitas.Controllers
             try
             {
                 _ReceituarioServices.AddReceita(novaReceita);
-
                 return Json(new { stats = "OK", id = novaReceita.Id });
             }
             catch (Exception e)
@@ -103,9 +102,7 @@ namespace Hsf_Receitas.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError(
-                    "Erro ao gerar report do receituário comum via FastReporter !" + e.Message
-                );
+                _logger.LogError("Erro ao gerar report do receituário comum via FastReporter !" + e.Message);
                 return RedirectToAction("Index", "Home");
             }
         }

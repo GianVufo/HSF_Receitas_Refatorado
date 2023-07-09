@@ -44,7 +44,6 @@ namespace Hsf_Receitas.Controllers
             try
             {
                 _AtestadoMedicoServices.AddATM(novoATM);
-
                 return Json(new { stats = "OK" });
             }
             catch (Exception e)
@@ -76,13 +75,7 @@ namespace Hsf_Receitas.Controllers
             catch (Exception e)
             {
                 _logger.LogError("Erro ao completar o receituário + atestado médico !" + e.Message);
-                return Json(
-                    new
-                    {
-                        stats = "INVALID",
-                        message = "falha ao salvar alterações na receita do atestado médico!"
-                    }
-                );
+                return Json(new{stats = "INVALID", message = "falha ao salvar alterações na receita do atestado médico!"});
             }
         }
 
@@ -119,10 +112,7 @@ namespace Hsf_Receitas.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError(
-                    "Erro ao rerar report de receituário + Atestado médico via FastReporter !"
-                        + e.Message
-                );
+                _logger.LogError("Erro ao rerar report de receituário + Atestado médico via FastReporter !"+ e.Message);
                 return RedirectToAction("Index", "Home");
             }
         }
@@ -138,9 +128,7 @@ namespace Hsf_Receitas.Controllers
 
                 ICollection<Receituario> prescriptionList = _ReceituarioServices.ListPrescriptionsForId(id);
                 ICollection<Medicacao> medicationList = _MedicacaoServices.ListMedicationPrescriptions(id);
-                ICollection<AtestadoMedico> atmList = _AtestadoMedicoServices.ListATMPrescriptions(
-                    id
-                );
+                ICollection<AtestadoMedico> atmList = _AtestadoMedicoServices.ListATMPrescriptions(id);
 
                 r.Report.Load(reportFile);
                 r.Report.Dictionary.RegisterBusinessObject(

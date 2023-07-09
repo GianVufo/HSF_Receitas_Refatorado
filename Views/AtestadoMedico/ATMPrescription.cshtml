@@ -30,13 +30,13 @@
                         <input id="atm-prescriptionId" class="form-control mb-3" type="hidden" asp-for="Id" disabled>
 
                         <label class="text-primary" for="atm-pacientName">Nome do Paciente: </label>
-                        <input type="text" id="atm-pacientName" class="form-control border-primary mb-3" asp-for="PacientName" onkeyup="ATMShowPrescriptionPacient()" onblur="ATMShowPrescriptionPacient()" required>
-
-                        <label class="text-primary" for="atm-dataAppoiment">Data da consulta: </label>
-                        <input type="date" id="atm-dataAppoiment" class="form-control border-primary mb-3" asp-for="DateOfMedicalAppoiment" onblur="ATMShowPrescriptionData()" required>
+                        <input placeholder="Ex: Márcio de Assis Cardoso" type="text" id="atm-pacientName" class="form-control line-inputs border-primary mt-0 mb-3" asp-for="PacientName" onkeyup="ATMShowPrescriptionPacient()" onblur="ATMShowPrescriptionPacient()" required>
 
                         <label class="text-primary" for="atm-doctorName">Nome do Médico: </label>
-                        <input type="text" id="atm-doctorName" class="form-control border-primary mb-3" asp-for="DoctorName" onkeyup="ATMShowPrescriptionMedic()" onblur="ATMShowPrescriptionMedic()" required>
+                        <input placeholder="Ex: Dr. Adriano Rocha" type="text" id="atm-doctorName" class="form-control line-inputs border-primary mt-0 mb-3" asp-for="DoctorName" onkeyup="ATMShowPrescriptionMedic()" onblur="ATMShowPrescriptionMedic()" required>
+
+                        <label class="text-primary" for="atm-dataAppoiment">Data da consulta: </label>
+                        <input type="date" id="atm-dataAppoiment" class="form-control line-inputs border-primary mt-0 mb-4" asp-for="DateOfMedicalAppoiment" onblur="ATMShowPrescriptionData()" required>
 
                         <div class="edit-button col-md-3">
                             <button type="submit" class="btn btn-sm btn-primary btn-printer mt-3"> <span class="material-symbols-outlined"> save </span> Salvar</button>
