@@ -19,11 +19,11 @@
 
             <tr>
 
-                <th>Nome da Medicação</th>
-                <th>Dosagem</th>
-                <th>Tipo de Uso</th>
-                <th>Tempo de Uso (Dias)</th>
-                <th>Doses a cada (Hrs)</th>
+                <th>Uso</th>
+                <th>Nome</th>
+                <th>Apresentação</th>
+                <th>Posologia</th>
+                <th>Duração do Tto.</th>
 
             </tr>
 
@@ -35,15 +35,15 @@
             {
                 <tr>
 
-                    <td class="text-center">@item.MedicationName</td>
+                    <td class="border-medic p-1">@item.RouteOfAdministration</td>
 
-                    <td>@item.MedicationDosage</td>
+                    <td class="border-medic p-1">@item.MedicationName</td>
 
-                    <td>@item.MedicationMethodUse</td>
+                    <td class="border-medic p-1">@item.Presentation</td>
 
-                    <td>@item.UseTime - dias</td>
+                    <td class="border-medic p-1">@item.Posology</td>
 
-                    <td>À cada @item.DoseTime - horas</td>
+                    <td class="border-medic p-1">@item.DurationOfTreatment</td>
 
                     <td>
                         <button class="btn btn-sm btn-outline-danger" type="button"

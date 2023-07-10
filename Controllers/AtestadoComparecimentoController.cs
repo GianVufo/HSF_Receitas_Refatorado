@@ -39,7 +39,6 @@ namespace Hsf_Receitas.Controllers
             try
             {
                 _AtestadoComparecimentoServices.AddATC(novoATC);
-
                 return Json(new { stats = "OK" });
             }
             catch (Exception e)
@@ -118,19 +117,13 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-                string reportFile = Path.Combine(
-                    _environment.WebRootPath,
-                    @"Print_Files\Rec_Atc.frx"
-                );
+                string reportFile = Path.Combine(_environment.WebRootPath, @"Print_Files\Rec_Atc.frx");
 
                 FastReport.Report r = new FastReport.Report();
 
-                ICollection<Receituario> prescriptionList =
-                    _ReceituarioServices.ListPrescriptionsForId(id);
-                ICollection<Medicacao> medicationList =
-                    _MedicacaoServices.ListMedicationPrescriptions(id);
-                ICollection<AtestadoComparecimento> atcList =
-                    _AtestadoComparecimentoServices.ListATCPrescriptions(id);
+                ICollection<Receituario> prescriptionList = _ReceituarioServices.ListPrescriptionsForId(id);
+                ICollection<Medicacao> medicationList = _MedicacaoServices.ListMedicationPrescriptions(id);
+                ICollection<AtestadoComparecimento> atcList = _AtestadoComparecimentoServices.ListATCPrescriptions(id);
 
                 r.Report.Load(reportFile);
                 r.Report.Dictionary.RegisterBusinessObject(

@@ -10,7 +10,7 @@ function AddATCPrescription() {
   $.post("/Receituario/Prescription", properties)
 
     .done(function (output) {
-      if (output.id != null) {
+      if (output.stats == "OK") {
 
         $(location).attr('href', '/AtestadoComparecimento/ATCCompletePrescription?id=' + output.id);
 

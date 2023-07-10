@@ -29,8 +29,39 @@
     margin-left: 8vh;
 }
 
+#dataAppoiment {
+    width: 25vh;
+}
+  
+#up-dataAppoiment {
+    width: 25vh;
+}
+
+#up-dataAppoiment {
+    width: 25vh;
+}  
+
+#atm-dataAppoiment {
+    width: 25vh;
+}
+
+#atm-up-dataAppoiment {
+    width: 25vh;
+}
+
 .prescription-card-body label {
     margin-left: 8vh;
+    margin-bottom: 5px;
+}
+
+.prescription-card-body label {  
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.prescription-card-body input {   
+    font-size: 11pt;
+    color: #000000;
 }
 
 .btn-printer {

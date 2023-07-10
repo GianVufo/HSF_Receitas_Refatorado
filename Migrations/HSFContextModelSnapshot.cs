@@ -83,29 +83,33 @@ namespace Hsf_Receitas.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("DoseTime")
-                        .HasColumnType("int");
-
-                    b.Property<string>("MedicationDosage")
+                    b.Property<string>("DurationOfTreatment")
                         .IsRequired()
-                        .HasColumnType("varchar(20) CHARACTER SET utf8mb4")
-                        .HasMaxLength(20);
-
-                    b.Property<string>("MedicationMethodUse")
-                        .IsRequired()
-                        .HasColumnType("varchar(20) CHARACTER SET utf8mb4")
-                        .HasMaxLength(20);
+                        .HasColumnType("varchar(40) CHARACTER SET utf8mb4")
+                        .HasMaxLength(40);
 
                     b.Property<string>("MedicationName")
                         .IsRequired()
                         .HasColumnType("varchar(80) CHARACTER SET utf8mb4")
                         .HasMaxLength(80);
 
+                    b.Property<string>("Posology")
+                        .IsRequired()
+                        .HasColumnType("varchar(40) CHARACTER SET utf8mb4")
+                        .HasMaxLength(40);
+
+                    b.Property<string>("Presentation")
+                        .IsRequired()
+                        .HasColumnType("varchar(40) CHARACTER SET utf8mb4")
+                        .HasMaxLength(40);
+
                     b.Property<int>("ReceituarioId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UseTime")
-                        .HasColumnType("int");
+                    b.Property<string>("RouteOfAdministration")
+                        .IsRequired()
+                        .HasColumnType("varchar(40) CHARACTER SET utf8mb4")
+                        .HasMaxLength(40);
 
                     b.HasKey("Id");
 

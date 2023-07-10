@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Hsf_Receitas.Migrations
 {
-    public partial class HsfDatabase : Migration
+    public partial class Hsf_Context : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -74,10 +74,10 @@ namespace Hsf_Receitas.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     MedicationName = table.Column<string>(maxLength: 80, nullable: false),
-                    MedicationDosage = table.Column<string>(maxLength: 20, nullable: false),
-                    MedicationMethodUse = table.Column<string>(maxLength: 20, nullable: false),
-                    UseTime = table.Column<int>(nullable: false),
-                    DoseTime = table.Column<int>(nullable: false),
+                    Presentation = table.Column<string>(maxLength: 40, nullable: false),
+                    RouteOfAdministration = table.Column<string>(maxLength: 40, nullable: false),
+                    Posology = table.Column<string>(maxLength: 40, nullable: false),
+                    DurationOfTreatment = table.Column<string>(maxLength: 40, nullable: false),
                     ReceituarioId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

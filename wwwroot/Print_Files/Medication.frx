@@ -4,10 +4,10 @@
     <BusinessObjectDataSource Name="medicationList" ReferenceName="medicationList" DataType="null" Enabled="true">
       <Column Name="Id" DataType="System.Int32"/>
       <Column Name="MedicationName" DataType="System.String"/>
-      <Column Name="MedicationDosage" DataType="System.String"/>
-      <Column Name="MedicationMethodUse" DataType="System.String"/>
-      <Column Name="UseTime" DataType="System.Int32"/>
-      <Column Name="DoseTime" DataType="System.Int32"/>
+      <Column Name="Presentation" DataType="System.String"/>
+      <Column Name="RouteOfAdministration" DataType="System.String"/>
+      <Column Name="Posology" DataType="System.String"/>
+      <Column Name="DurationOfTreatment" DataType="System.String"/>
       <Column Name="Receituario" DataType="null">
         <Column Name="Id" DataType="System.Int32"/>
         <Column Name="PacientName" DataType="System.String"/>
@@ -44,10 +44,10 @@
       <TextObject Name="Text21" Left="28.35" Top="179.55" Width="434.7" Height="56.7" Text="MEDICAMENTOS :" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 18pt, style=Bold" TextFill.Color="0, 120, 215"/>
       <DataBand Name="Data2" Top="364.46" Width="484.22" Height="18.9" DataSource="medicationList">
         <TextObject Name="Text15" Width="94.5" Height="18.9" Text="[medicationList.MedicationName]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
-        <TextObject Name="Text16" Left="94.5" Width="103.95" Height="18.9" Text="[medicationList.MedicationDosage]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
-        <TextObject Name="Text17" Left="198.45" Width="94.5" Height="18.9" Text="[medicationList.MedicationMethodUse]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
-        <TextObject Name="Text26" Left="292.95" Width="94.5" Height="18.9" Text="[medicationList.UseTime] - Dias" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
-        <TextObject Name="Text27" Left="387.45" Width="94.5" Height="18.9" Text="[medicationList.DoseTime] - Horas" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
+        <TextObject Name="Text16" Left="94.5" Width="103.95" Height="18.9" Text="[medicationList.Presentation]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
+        <TextObject Name="Text17" Left="198.45" Width="94.5" Height="18.9" Text="[medicationList.RouteOfAdministration]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
+        <TextObject Name="Text26" Left="292.95" Width="94.5" Height="18.9" Text="[medicationList.Posology]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
+        <TextObject Name="Text27" Left="387.45" Width="94.5" Height="18.9" Text="[medicationList.DurationOfTreatment]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 9pt" TextFill.Color="0, 120, 215"/>
         <LineObject Name="Line5" Top="18.9" Width="481.95" Border.Color="0, 120, 215"/>
         <LineObject Name="Line6" Left="94.5" Top="18.9" Height="-18.9" Border.Color="Highlight"/>
         <LineObject Name="Line7" Left="198.45" Top="18.9" Height="-18.9" Border.Color="Highlight"/>

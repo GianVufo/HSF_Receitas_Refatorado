@@ -11,14 +11,12 @@ namespace Hsf_Receitas.Controllers
     {
         private readonly ILogger<MedicacaoController> _logger;
         private readonly MedicacaoServices _MedicacaoServices;
-        private readonly ReceituarioServices _ReceituarioServices;
         private readonly HSFContext _database;
 
-        public MedicacaoController(ILogger<MedicacaoController> logger, MedicacaoServices medicacaoServices, ReceituarioServices receituarioServices, HSFContext hSFContext)
+        public MedicacaoController(ILogger<MedicacaoController> logger, MedicacaoServices medicacaoServices, HSFContext hSFContext)
         {
             _logger = logger;
             _MedicacaoServices = medicacaoServices;
-            _ReceituarioServices = receituarioServices;
             _database = hSFContext;
         }
 
@@ -28,7 +26,6 @@ namespace Hsf_Receitas.Controllers
             try
             {
                 _MedicacaoServices.AddMedicacao(novaMedicacao);
-
                 return Json(new { stats = "OK" });
             }
             catch (Exception e)
@@ -43,10 +40,9 @@ namespace Hsf_Receitas.Controllers
         {
             try
             {
-
                 var item = _database.Medicamentos.Find(id);
 
-                if (item.Id != 0)
+                if (item != null)
                 {
                     _MedicacaoServices.DelMedication(item.Id);
                     return Json(new { stats = "OK" });
