@@ -35,6 +35,13 @@ function AddMedications() {
     });
 }
 
+$("#other").click(function (e){
+  if(!$('#outros').is(':checked')) {
+    e.preventDefault();
+    $('#outros').attr('checked', 'true');
+  }
+});
+
 $(document).ready(function () {
   $("#medic-form").submit(function (e) {
     e.preventDefault();

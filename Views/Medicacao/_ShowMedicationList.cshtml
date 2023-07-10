@@ -7,6 +7,7 @@
 
     Medicacao medic = new Medicacao();
     HSFContext database = new HSFContext();
+
     List<Medicacao> medicList = database.Medicamentos.Where(m => m.ReceituarioId == Model.Id).ToList();
     List<Receituario> prescriptionList = database.Receitas.Where(m => m.Id == Model.Id).ToList();
 
@@ -93,42 +94,37 @@
 
                                     <div class="modal-content">
 
-                                        <div class="modal-header text-center">
+                                        <div class="modal-header bg-danger text-light text-center">
 
-                                            <h3 class="modal-title text-danger text-center" id="deleteMedicationTitle">Alerta!</h3>
+                                            <h3 class="modal-title text-ligth text-center" id="deleteMedicationTitle">Alerta!</h3>
 
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                                <span class="text-light" aria-hidden="true">&times;</span>
                                             </button>
 
                                         </div>
 
-                                        <div class="modal-body p-0">
+                                        <form onsubmit="deleteMedication(@item.Id)" name="medication-delete" class="medication-delete">
 
-                                            <form onsubmit="deleteMedication(@item.Id)" name="medication-delete" class="medication-delete">
+                                            <div class="modal-body p-3">
 
-                                                <div class="warning-delete"></div>
-
-                                                    <div class="p-2 text-justify">
-                                                        <span>Tem certeza que deseja excluir a medicação
-                                                        <b>@item.MedicationName</b> ?</span>
-                                                    </div>
-
-                                                    <div class="modal-footer p-2">
-
-                                                        <button class="btn btn-outline-danger btn-sm" type="submit" title="Delete"><i style="font-size: 20px;" class="bi bi-person-fill-x"></i></button>
-                                                            
-                                                    </div>
-
-                                                </form>
+                                                <div class="p-3 text-center">
+                                                    <span>Tem certeza que deseja excluir a medicação <b class="text-danger">@item.MedicationName</b> ?</span>
+                                                </div>
 
                                             </div>
 
-                                        </div>
+                                            <div class="modal-footer p-1">
+                                                <button class="btn btn-outline-danger btn-sm" type="submit" title="Excluir"><i style="font-size: 20px;" class="bi bi-person-fill-x"></i></button>  
+                                            </div>
+
+                                        </form>
 
                                     </div>
 
                                 </div>
+
+                            </div>
 
                             /* Finish DeleteMedication Modal */
 

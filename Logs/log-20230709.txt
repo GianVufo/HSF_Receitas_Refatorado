@@ -126,3 +126,4 @@ System.InvalidOperationException: The model item passed into the ViewDataDiction
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-07-09T20:41:29.5919640-03:00 0HMS0OG3N9H0U:0000003F [ERR] Erro ao adicionar medicamento!An error occurred while updating the entries. See the inner exception for details. (0f085e83)
