@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Maio-2023 às 22:33
--- Versão do servidor: 10.4.25-MariaDB
--- versão do PHP: 7.4.30
+-- Tempo de geração: 11-Jul-2023 às 03:50
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -58,10 +58,10 @@ CREATE TABLE `atm` (
 CREATE TABLE `medicamentos` (
   `Id` int(11) NOT NULL,
   `MedicationName` varchar(80) NOT NULL,
-  `MedicationDosage` varchar(20) NOT NULL,
-  `MedicationMethodUse` varchar(20) NOT NULL,
-  `UseTime` int(11) NOT NULL,
-  `DoseTime` int(11) NOT NULL,
+  `Presentation` varchar(40) NOT NULL,
+  `RouteOfAdministration` varchar(40) NOT NULL,
+  `Posology` varchar(40) NOT NULL,
+  `DurationOfTreatment` varchar(40) NOT NULL,
   `ReceituarioId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -94,7 +94,7 @@ CREATE TABLE `__efmigrationshistory` (
 --
 
 INSERT INTO `__efmigrationshistory` (`MigrationId`, `ProductVersion`) VALUES
-('20230511203026_Hsf_Database', '3.0.0');
+('20230711015018_HSF_Context', '3.0.0');
 
 --
 -- Índices para tabelas despejadas

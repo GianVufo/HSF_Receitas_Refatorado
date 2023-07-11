@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5aix8LiRZl89K+8NyHfjitfX4Sgkt+6lktzTW/0Vf7O68ijoBXV+gcx5S0Y5hTEz6QrF2n2GW3eU8P1kUVcQ7g==",
+  "dgSpecHash": "SD4Kj9eI6veNScg+mKkqKeNNs7CX+1XcKGZxUxAqdJ20AfhEL6F0lBJXO+U3Qso+PEwqLD2Pid8OwvvTA0Ia8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrador\\Desktop\\HSF_Receitas_Refatorado\\Hsf_Receitas.csproj",
+  "projectFilePath": "C:\\Users\\Administrador\\Documents\\HSF_Receitas_Refatorado\\Hsf_Receitas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrador\\.nuget\\packages\\fastreport.compat\\2023.1.8\\fastreport.compat.2023.1.8.nupkg.sha512",
     "C:\\Users\\Administrador\\.nuget\\packages\\fastreport.opensource\\2023.2.9\\fastreport.opensource.2023.2.9.nupkg.sha512",
