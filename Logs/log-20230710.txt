@@ -1,0 +1,1 @@
+2023-07-10T23:15:26.7362055-03:00 0HMS1MFAJ7O6B:00000017 [ERR] Erro ao adicionar receita!An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call. (e2c12b00)

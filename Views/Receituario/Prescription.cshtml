@@ -21,9 +21,9 @@
 
                 <span class="mt-3 mb-3 alerta" ></span>
 
-                <div class="card text-light border-primary">
+                <div class="card border-primary">
 
-                    <h5 class="card-header font-weight-bold">Informações básicas :</h5>
+                    <h5 class="card-header text-light font-weight-bold">Informações básicas :</h5>
 
                     <div class="card-body prescription-card-body">
 
@@ -46,9 +46,9 @@
 
                 </div>
 
-                <div class="card text-light border-primary">
+                <div class="card border-primary">
 
-                    <h5 class="card-header font-weight-bold">Medicações :</h5>
+                    <h5 class="card-header text-light font-weight-bold">Medicações :</h5>
 
                     <div class="card-body">
 
@@ -57,7 +57,6 @@
                         <div class="row button-prescription">
 
                             <button type="button" title="Salve a receita para adicionar medicamentos." class="btn btn-sm btn-info btn-printer medic-btn" disabled>
-                                
                             <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos </button>
 
                             <button title="Salve a receita para imprimir." class="btn btn-sm btn-secondary btn-printer medic-btn" disabled><span class="material-symbols-outlined mr-2"> print </span> Imprimir </button>
@@ -74,7 +73,7 @@
 
     </div>
 
-    <div class="card border-primary col-md-5 mb-4 p-0">
+    <div class="card card-viewer border-primary col-md-5 mb-4 p-0">
         @await Html.PartialAsync("/Views/Medicacao/_ShowMedication.cshtml", @Model)
     </div>
 

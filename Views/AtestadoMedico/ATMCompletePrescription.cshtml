@@ -37,9 +37,9 @@
 
                 <span class="mt-3 mb-3 alerta"></span>
 
-                <div class="card text-light border-primary">
+                <div class="card border-primary">
 
-                    <h5 class="card-header font-weight-bold">Informações básicas :</h5>
+                    <h5 class="card-header text-light font-weight-bold">Informações básicas :</h5>
 
                     <div class="card-body prescription-card-body">
 
@@ -68,9 +68,9 @@
 
                 </div>
 
-                <div class="card text-light border-primary">
+                <div class="card border-primary">
 
-                    <h5 class="card-header font-weight-bold">Medicações :</h5>
+                    <h5 class="card-header text-light font-weight-bold">Medicações :</h5>
 
                     <div class="card-body">
 
@@ -82,9 +82,12 @@
 
                         <div class="row button-prescription">
 
-                            <button type="button" data-toggle="modal" data-target="#atm-medication-modal-@Model.Id"
-                                onclick="inserirRemedios()" class="btn btn-sm btn-info btn-printer"> <span
-                                    class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos</button>
+                            @if (medicList.Count() == 6)
+                            {
+                                <button type="button" title="Máx. de medicamentos inseridos!" class="btn btn-sm btn-info btn-printer medic-btn" disabled> <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos</button>
+                            }else {
+                                <button type="button" data-toggle="modal" data-target="#atm-medication-modal-@Model.Id" onclick="inserirRemedios()" class="btn btn-sm btn-info btn-printer"> <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos</button>
+                            }
 
                             @if (medicList.Count() <= 0)
                             {
@@ -116,9 +119,9 @@
 
                 </div>
 
-                <div class="card text-light border-primary">
+                <div class="card border-primary">
 
-                    <h5 class="card-header font-weight-bold">Atestado Médico :</h5>
+                    <h5 class="card-header text-light font-weight-bold">Atestado Médico :</h5>
 
                     <div class="card-body">
 
@@ -157,7 +160,7 @@
 
     </div>
 
-    <div class="card border-primary col-md-5 mb-4 p-0">
+    <div class="card card-viewer-list border-primary col-md-5 mb-4 p-0">
         @await Html.PartialAsync("/Views/Medicacao/_ShowMedicationList.cshtml", @Model)
     </div>
 

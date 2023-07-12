@@ -73,7 +73,12 @@
 
                         <div class="row button-prescription">
 
-                            <button type="button" data-toggle="modal" data-target="#atc-medication-modal-@Model.Id" title="Inserir medicamentos à receita" onclick=" inserirRemedios()" class="btn btn-sm btn-info btn-printer"> <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos</button>
+                            @if (medicList.Count() == 6)
+                            {
+                                <button type="button" title="Máx. de medicamentos inseridos!" class="btn btn-sm btn-info btn-printer medic-btn" disabled> <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos</button>
+                            }else {
+                                <button type="button" data-toggle="modal" data-target="#atc-medication-modal-@Model.Id" title="Inserir medicamentos à receita" onclick=" inserirRemedios()" class="btn btn-sm btn-info btn-printer"> <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos</button>
+                            }
 
                             @if (medicList.Count() <= 0)
                             {
@@ -138,7 +143,7 @@
 
     </div>
 
-    <div class="card border-primary col-md-5 mb-4 p-0">    
+    <div class="card card-viewer-list border-primary col-md-5 mb-4">    
         @await Html.PartialAsync("/Views/Medicacao/_ShowMedicationList.cshtml", @Model)
     </div>
 
