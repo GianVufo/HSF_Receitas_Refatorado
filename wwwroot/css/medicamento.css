@@ -22,7 +22,7 @@
 }
 
 .medic-list-table {
-  height: 7em;
+  height: 5em;
   margin-bottom: 0%;
 }
 
@@ -165,3 +165,12 @@ fieldset#field-medication {
 }
 
 /* Fim da estilização do modal de inserção de medicamento */
+
+
+.view-presc {
+  margin-top: 0%;
+  margin-bottom: 12vh;
+  width: 100%;
+  height: 90%;
+  padding: 5px;
+}

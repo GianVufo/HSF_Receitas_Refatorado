@@ -22,7 +22,7 @@
 }
 
 .p1 {
-    margin-left: 35vh;
+    margin-left: 32vh;
 }
 
 .atm-pacient {
@@ -95,6 +95,16 @@
     text-align: center;
     margin-top: -3.5vh;
     margin-left: 1vh;
+}
+
+.atm-article {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 0%;
+    position: absolute;
+    top: 25vh;
+    margin-top: 10vh;
 }
 
 .p5 {

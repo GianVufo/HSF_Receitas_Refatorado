@@ -12,142 +12,146 @@
     List<Receituario> prescriptionList = database.Receitas.Where(m => m.Id == Model.Id).ToList();
 
 }
+
+<div class="view-presc">
  
-@if (prescriptionList.Count() > 0)
-{
-    <div class="header-show-prescription">
+    @if (prescriptionList.Count() > 0)
+    {
+        <div class="header-show-prescription">
 
-        <div class="header-img mt-2 mb-2">
-            <img src="../images/logotipo-hospital-sao-francisco.png"alt="logotipo da vizualização do receituário comum">
-        </div>
+            <div class="header-img mt-2 mb-2">
+                <img src="../images/logotipo-hospital-sao-francisco.png"alt="logotipo da vizualização do receituário comum">
+            </div>
 
-        <div class="show-logo mt-2 mb-2">
+            <div class="show-logo mt-2 mb-2">
 
-            <h1>RECEITUÁRIO</h1>
-            <h2 style="text-decoration: underline 2px solid #007bff;">FUNDAÇÃO DE SAÚDE TRÊS MARIAS</h2>
-            <h2>HOSPITAL SÃO FRANCISCO</h2>
-
-        </div>
-
-    </div>
-
-    <div class="show-body mt-4">
-
-        @foreach (var item in prescriptionList)
-        {
-            <div class="prescription-data">
-
-                <div class="inputs">
-                    <p class="m-0 p-0">NOME DO PACIENTE :</p><span class="content">@item.PacientName</span>
-                </div>
-                <div class="inputs">
-                    <p class="m-0 p-0">NOME DO MÉDICO :</p><span class="content">@item.DoctorName</span>
-                </div>
-                <div class="inputs">
-                    <p class="m-0 p-0">DATA DO ATENDIMENTO :</p><span class="content">@item.DateOfMedicalAppoiment.ToString("dd/MM/yyyy")</span>
-                </div>
+                <h1>RECEITUÁRIO</h1>
+                <h2 style="text-decoration: underline 2px solid #007bff;">FUNDAÇÃO DE SAÚDE TRÊS MARIAS</h2>
+                <h2>HOSPITAL SÃO FRANCISCO</h2>
 
             </div>
-        }
 
-        <div class="medicacoes p-4">
+        </div>
 
-            <h3 class="text-center mt-2 mb-3 text-primary font-weight-bold">MEDICAMENTOS :</h3>
+        <div class="show-body mt-4">
 
-            @if (medicList.Count() > 0)
+            @foreach (var item in prescriptionList)
             {
-                <table class="text-primary list-visualization mt-3">
-                    @foreach (var item in medicList)
-                    {
-                        <thead class="text-center font-weight-normal">
+                <div class="prescription-data">
 
-                            <tr>
-                                <tr class="mb-0">
-                                    <td class="font-weight-bold"><span> Vias de Administração: @item.RouteOfAdministration</span></td>
+                    <div class="inputs">
+                        <p class="m-0 p-0">NOME DO PACIENTE :</p><span class="content">@item.PacientName</span>
+                    </div>
+                    <div class="inputs">
+                        <p class="m-0 p-0">NOME DO MÉDICO :</p><span class="content">@item.DoctorName</span>
+                    </div>
+                    <div class="inputs">
+                        <p class="m-0 p-0">DATA DO ATENDIMENTO :</p><span class="content">@item.DateOfMedicalAppoiment.ToString("dd/MM/yyyy")</span>
+                    </div>
+
+                </div>
+            }
+
+            <div class="medicacoes">
+
+                <h3 class="text-center mt-2 mb-3 text-primary font-weight-bold">MEDICAMENTOS :</h3>
+
+                @if (medicList.Count() > 0)
+                {
+                    <table class="text-primary list-visualization table-responsive">
+                        @foreach (var item in medicList)
+                        {
+                            <thead class="text-center font-weight-normal">
+
+                                <tr>
+                                    <tr class="mb-0">
+                                        <td class="font-weight-bold"><span> Vias de Administração: @item.RouteOfAdministration</span></td>
+                                    </tr>
+
+                                    @* <th class="border-medic">Uso</th> *@
+                                    <th class="mt-0">Nome</th>
+                                    <th class="mt-0">Apresentação</th>
+                                    <th class="mt-0">Posologia</th>
+                                    <th class="mt-0">Duração do Tto.</th>
+
                                 </tr>
 
-                                @* <th class="border-medic">Uso</th> *@
-                                <th class="mt-0">Nome</th>
-                                <th class="mt-0">Apresentação</th>
-                                <th class="mt-0">Posologia</th>
-                                <th class="mt-0">Duração do Tto.</th>
+                            </thead>
 
-                            </tr>
+                            <tbody class="text-center">
+    
+                                <tr class="">
 
-                        </thead>
+                                    <td class="">@item.MedicationName</td>
+                                    <td class="">@item.Presentation</td>
+                                    <td class="">@item.Posology</td>
+                                    <td class="">@item.DurationOfTreatment</td>
 
-                        <tbody class="text-center">
-   
-                            <tr class="">
+                                    <tr class="border-medic"><td><span style="font-size: 6pt;" class="text-primary"><b>Observações :</b></span></td></tr>
 
-                                <td class="">@item.MedicationName</td>
-                                <td class="">@item.Presentation</td>
-                                <td class="">@item.Posology</td>
-                                <td class="">@item.DurationOfTreatment</td>
+                                </tr>
 
-                                <tr class="border-medic"><td><span style="font-size: 6pt;" class="text-primary"><b>Observações :</b></span></td></tr>
+                            </tbody>
 
-                            </tr>
+                            /* Start DeleteMedication Modal */
 
-                        </tbody>
+                                <div class="modal fade myModal-@item.Id" tabindex="-1" role="dialog" aria-labelledby="deleteMedicationTitle" aria-hidden="true">
 
-                        /* Start DeleteMedication Modal */
+                                    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
 
-                            <div class="modal fade myModal-@item.Id" tabindex="-1" role="dialog" aria-labelledby="deleteMedicationTitle" aria-hidden="true">
+                                        <div class="modal-content">
 
-                                <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+                                            <div class="modal-header bg-danger text-light text-center">
 
-                                    <div class="modal-content">
+                                                <h3 class="modal-title text-ligth text-center" id="deleteMedicationTitle">Alerta!</h3>
 
-                                        <div class="modal-header bg-danger text-light text-center">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span class="text-light" aria-hidden="true">&times;</span>
+                                                </button>
 
-                                            <h3 class="modal-title text-ligth text-center" id="deleteMedicationTitle">Alerta!</h3>
+                                            </div>
 
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span class="text-light" aria-hidden="true">&times;</span>
-                                            </button>
+                                            <form onsubmit="deleteMedication(@item.Id)" name="medication-delete" class="medication-delete">
 
-                                        </div>
+                                                <div class="modal-body p-3">
 
-                                        <form onsubmit="deleteMedication(@item.Id)" name="medication-delete" class="medication-delete">
+                                                    <div class="p-3 text-center">
+                                                        <span>Tem certeza que deseja excluir a medicação <b class="text-danger">@item.MedicationName</b> ?</span>
+                                                    </div>
 
-                                            <div class="modal-body p-3">
-
-                                                <div class="p-3 text-center">
-                                                    <span>Tem certeza que deseja excluir a medicação <b class="text-danger">@item.MedicationName</b> ?</span>
                                                 </div>
 
-                                            </div>
+                                                <div class="modal-footer p-1">
+                                                    <button class="btn btn-outline-danger btn-sm" type="submit" title="Excluir"><i style="font-size: 20px;" class="bi bi-person-fill-x"></i></button>  
+                                                </div>
 
-                                            <div class="modal-footer p-1">
-                                                <button class="btn btn-outline-danger btn-sm" type="submit" title="Excluir"><i style="font-size: 20px;" class="bi bi-person-fill-x"></i></button>  
-                                            </div>
+                                            </form>
 
-                                        </form>
+                                        </div>
 
                                     </div>
 
                                 </div>
 
-                            </div>
+                            /* Finish DeleteMedication Modal */
+                        }
+                    </table>
+                }
+            </div>
 
-                        /* Finish DeleteMedication Modal */
-                    }
-                </table>
-            }
         </div>
 
-    </div>
+        <div class="show-footer">
+            <P>BR 040 - KM 438 - BRASÍLIA / BELO HORIZONTE - TEL.: (38) 3754-1256</P>
+            <p><span>PARQUE DIADORIM</span> - CEP: 39205-000 - TRÊS MARIAS - MINAS GERAIS</p>
+            <div class="line"></div>
+        </div>
 
-    <div class="show-footer mt-5">
-        <P>BR 040 - KM 438 - BRASÍLIA / BELO HORIZONTE - TEL.: (38) 3754-1256</P>
-        <p><span>PARQUE DIADORIM</span> - CEP: 39205-000 - TRÊS MARIAS - MINAS GERAIS</p>
-        <div class="line"></div>
-    </div>
+    }else
+    {
+        <div class="alert alert-warning w-100 text-center alert-medication" role="alert">
+            Não existe uma receita para mostrar !
+        </div>
+    }
 
-}else
-{
-    <div class="alert alert-warning w-100 text-center alert-medication" role="alert">
-        Não existe uma receita para mostrar !
-    </div>
-}
+</div>
