@@ -95,3 +95,23 @@
     transform: none;
     transition: none;
 }
+
+@media (max-width: 768px) {
+
+    .logo {
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .logotipo {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .logo-img {
+        display: none;
+    }
+}

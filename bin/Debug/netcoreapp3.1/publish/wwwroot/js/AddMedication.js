@@ -3,20 +3,24 @@ function AddMedications() {
   let properties = {
     Id: $("#medicationId").val(),
     MedicationName: $("#medicationName").val(),
-    MedicationDosage: $("#medicationDosage").val(),
-    MedicationMethodUse: $("#medicationUse").val(),
-    UseTime: $("#useTime").val(),
-    DoseTime: $("#doseTime").val(),
+    Presentation: $("#presentation").val(),
+    RouteOfAdministration: $("input[type=radio][name=administration]:checked").val(),
+    Posology: $("#posology").val(),
+    DurationOfTreatment: $("#durationTreatment").val(),
     ReceituarioId: $(".addRec-recId").val(),
   };
+
+  if (properties.RouteOfAdministration == "outros") {
+    properties.RouteOfAdministration = $("#other").val();
+  }
 
   $.post("/Medicacao/MedicationRegister", properties)
 
     .done(function (output) {
+
       if (output.stats == "OK") {
 
-        alert("Medicação: " + properties.MedicationName + " - " + properties.MedicationDosage + " cadastrada com sucesso!")
-        //$(location).attr('href', '/Receituario/CompletePrescription?id=' + parseInt(properties.ReceituarioId));
+        alert("Medicação: " + properties.MedicationName + " - " + properties.Presentation + " cadastrada com sucesso!")
         location.reload();
 
       } else if (output.stats == "INVALID") {
@@ -30,6 +34,13 @@ function AddMedications() {
       alert("Falha ao adicionar medicamento!");
     });
 }
+
+$("#other").click(function (e){
+  if(!$('#outros').is(':checked')) {
+    e.preventDefault();
+    $('#outros').attr('checked', 'true');
+  }
+});
 
 $(document).ready(function () {
   $("#medic-form").submit(function (e) {

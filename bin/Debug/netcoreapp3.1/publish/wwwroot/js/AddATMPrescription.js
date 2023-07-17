@@ -10,7 +10,7 @@ function AddATMPrescription() {
   $.post("/Receituario/Prescription", properties)
 
     .done(function (output) {
-      if (output.id != null) {
+      if (output.stats == "OK") {
 
         $(location).attr('href', '/AtestadoMedico/ATMCompletePrescription?id=' + output.id);
 

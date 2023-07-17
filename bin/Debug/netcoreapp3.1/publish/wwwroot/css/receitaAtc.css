@@ -1,5 +1,5 @@
 .p1-atc {
-    margin-left: 35vh;
+    margin-left: 32vh;
 }
 
 .atc-pacient {
@@ -56,6 +56,8 @@
     margin-top: 10vh;
     color: #007bff;
     padding: 2%;
+    position: absolute;
+    bottom: 12vh;
 }
 
 .p-turn {
@@ -75,6 +77,17 @@
     margin-top: 0%;
     margin-left: 1vh;
     margin-bottom: 3vh;
+}
+
+.atc-article {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 0%;
+    position: absolute;
+    top: 25vh;
+    margin-top: 10vh;
+    line-height: 1.8em;
 }
 
 @media (max-width: 1920px) and (min-width: 1920px) {
