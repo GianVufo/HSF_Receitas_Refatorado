@@ -32,9 +32,9 @@
                         <input id="prescriptionId" class="form-control mb-3" type="hidden" asp-for="Id" disabled>
 
                         <label class="text-primary" for="pacientName">Nome do Paciente: </label>
-                        <input placeholder="Ex: Márcio de Assis Cardoso" type="text" id="pacientName" class="form-control line-inputs s-pacientName border-primary mt-0 mb-3" asp-for="PacientName" onblur="ShowPrescriptionPacient()" onkeyup="ShowPrescriptionPacient()" required>
+                        <input placeholder="Ex: Márcio de Assis Cardoso" maxlength="35" minlength="4" type="text" id="pacientName" class="form-control line-inputs s-pacientName border-primary mt-0 mb-3" asp-for="PacientName" onblur="ShowPrescriptionPacient()" onkeyup="ShowPrescriptionPacient()" required>
 
-                        <label class="text-primary" for="doctorName">Nome do Médico: </label>
+                        <label class="text-primary" maxlength="35" minlength="4" for="doctorName">Nome do Médico: </label>
                         <input placeholder="Ex: Dr. Adriano Rocha" type="text" id="doctorName" class="form-control line-inputs s-doctorName border-primary mt-0 mb-3" asp-for="DoctorName" onblur="ShowPrescriptionMedic()" onkeyup="ShowPrescriptionMedic()" required>
 
                         <label class="text-primary" for="dataAppoiment">Data da consulta: </label>
@@ -48,7 +48,7 @@
 
             </div> 
 
-            <div class="card register-medication border-primary">
+            <div class="card border-primary">
 
                 <div class="card-header text-light">
                     <h5 class="font-weight-bold mb-0">Medicações :</h5>

@@ -1445,3 +1445,5 @@ C:\Users\Administrador\Documents\HSF_Receitas_Refatorado\obj\Debug\netcoreapp3.1
 C:\Users\Administrador\Documents\HSF_Receitas_Refatorado\obj\Debug\netcoreapp3.1\Hsf_Receitas.dll
 C:\Users\Administrador\Documents\HSF_Receitas_Refatorado\obj\Debug\netcoreapp3.1\Hsf_Receitas.pdb
 C:\Users\Administrador\Documents\HSF_Receitas_Refatorado\obj\Debug\netcoreapp3.1\Hsf_Receitas.genruntimeconfig.cache
+C:\Users\gianluca.vialli\Desktop\HSF_Receitas_Refatorado\obj\Debug\netcoreapp3.1\Razor\Views\Medicacao\_ShowMedication.cshtml.g.cs
+C:\Users\gianluca.vialli\Desktop\HSF_Receitas_Refatorado\obj\Debug\netcoreapp3.1\Razor\Views\Medicacao\_ShowMedicationList.cshtml.g.cs
