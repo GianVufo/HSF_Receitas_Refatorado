@@ -38,3 +38,4 @@ MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'm.DurationOf
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-07-16T21:51:30.5088634-03:00 0HMS6BVGK3I27:00000051 [ERR] Erro ao adicionar receita!An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call. (e2c12b00)
