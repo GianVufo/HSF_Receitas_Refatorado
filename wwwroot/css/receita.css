@@ -241,12 +241,15 @@
     border-radius: 5px;
     align-items: center;
     color: #007bff;
-    font-size: 0.9em;
-    font-weight: bold;
+    font-size: 0.7em;
 }
 
 .inputs span {
     margin-left: 1%;
+}
+
+.inputs p{
+    font-weight: bold;
 }
 
 .v-card {
@@ -292,10 +295,6 @@
     margin: auto;
     padding: 1%;
 
-}
-
-.medicacoes table {
-    border: 1px solid #007bff;
 }
 
 .medicacoes h3 {
@@ -378,16 +377,14 @@
 
 .border-table {
     width: 100%;
-    border-top: 1px solid #007bff;
-    border-bottom: 1px solid #007bff;
+    border: 1px solid #007bff;
     padding: 0%;
     margin: 0%;
 }
 
 .border-line {
     width: 100%;
-    border-right: 1px solid #007bff;
-    border-left: 1px solid #007bff;
+    border: 1px solid #007bff;
     padding: 0%;
     margin: 0%;
 }
