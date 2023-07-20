@@ -389,6 +389,13 @@
     margin: 0%;
 }
 
+.border-line2{
+
+    background-color: #007bff;
+    color: #fff;
+
+}
+
 /*@media*/
 
 @media (max-width: 768px) {

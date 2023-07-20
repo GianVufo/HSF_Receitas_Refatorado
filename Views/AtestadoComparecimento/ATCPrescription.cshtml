@@ -32,10 +32,10 @@
                         <input id="atc-prescriptionId" class="form-control mb-3" type="hidden" asp-for="Id" disabled>
 
                         <label class="text-primary" for="atc-pacientName">Nome do Paciente: </label>
-                        <input placeholder="Ex: Márcio de Assis Cardoso" type="text" id="atc-pacientName" onkeyup="ShowPrescriptionPacient()" onblur="ShowPrescriptionPacient()" class="form-control line-inputs s-pacientName border-primary mt-0 mb-3" asp-for="PacientName" required>
+                        <input placeholder="Ex: Márcio de Assis Cardoso" maxlength="50" minlength="8" type="text" id="atc-pacientName" onkeyup="ShowPrescriptionPacient()" onblur="ShowPrescriptionPacient()" class="form-control line-inputs s-pacientName border-primary mt-0 mb-3" asp-for="PacientName" required>
 
                         <label class="text-primary" for="atc-doctorName">Nome do Médico: </label>
-                        <input placeholder="Ex: Dr. Adriano Rocha" type="text" id="atc-doctorName" onkeyup="ShowPrescriptionMedic()" onblur="ShowPrescriptionMedic()" class="form-control line-inputs s-doctorName border-primary mt-0 mb-3" asp-for="DoctorName" required>
+                        <input placeholder="Ex: Dr. Adriano Rocha" maxlength="50" minlength="8" type="text" id="atc-doctorName" onkeyup="ShowPrescriptionMedic()" onblur="ShowPrescriptionMedic()" class="form-control line-inputs s-doctorName border-primary mt-0 mb-3" asp-for="DoctorName" required>
 
                         <label class="text-primary" for="atc-dataAppoiment">Data da consulta: </label>
                         <input type="date" id="atc-dataAppoiment" onblur="ShowPrescriptionData()" class="form-control line-inputs s-dataAppoiment border-primary mt-0 mb-4" asp-for="DateOfMedicalAppoiment" required>

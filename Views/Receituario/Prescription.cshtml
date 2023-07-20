@@ -32,10 +32,10 @@
                         <input id="prescriptionId" class="form-control mb-3" type="hidden" asp-for="Id" disabled>
 
                         <label class="text-primary" for="pacientName">Nome do Paciente: </label>
-                        <input placeholder="Ex: Márcio de Assis Cardoso" maxlength="35" minlength="4" type="text" id="pacientName" class="form-control line-inputs s-pacientName border-primary mt-0 mb-3" asp-for="PacientName" onblur="ShowPrescriptionPacient()" onkeyup="ShowPrescriptionPacient()" required>
+                        <input placeholder="Ex: Márcio de Assis Cardoso" maxlength="50" minlength="8" type="text" id="pacientName" class="form-control line-inputs s-pacientName border-primary mt-0 mb-3" asp-for="PacientName" onblur="ShowPrescriptionPacient()" onkeyup="ShowPrescriptionPacient()" required>
 
-                        <label class="text-primary" maxlength="35" minlength="4" for="doctorName">Nome do Médico: </label>
-                        <input placeholder="Ex: Dr. Adriano Rocha" type="text" id="doctorName" class="form-control line-inputs s-doctorName border-primary mt-0 mb-3" asp-for="DoctorName" onblur="ShowPrescriptionMedic()" onkeyup="ShowPrescriptionMedic()" required>
+                        <label class="text-primary" for="doctorName">Nome do Médico: </label>
+                        <input placeholder="Ex: Dr. Adriano Rocha" type="text"  maxlength="50" minlength="8" id="doctorName" class="form-control line-inputs s-doctorName border-primary mt-0 mb-3" asp-for="DoctorName" onblur="ShowPrescriptionMedic()" onkeyup="ShowPrescriptionMedic()" required>
 
                         <label class="text-primary" for="dataAppoiment">Data da consulta: </label>
                         <input type="date" id="dataAppoiment" class="form-control line-inputs s-dataAppoiment border-primary mt-0 mb-4" asp-for="DateOfMedicalAppoiment" onblur="ShowPrescriptionData()" required>

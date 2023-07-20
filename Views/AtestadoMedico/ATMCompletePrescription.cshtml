@@ -49,11 +49,11 @@
                             asp-for="Id" disabled>
 
                         <label class="text-primary" for="atm-up-pacientName">Nome do Paciente: </label>
-                        <input type="text" id="atm-up-pacientName" class="form-control line-inputs border-primary mt-0 mb-3"
+                        <input type="text" maxlength="50" minlength="8" id="atm-up-pacientName" class="form-control line-inputs border-primary mt-0 mb-3"
                             asp-for="PacientName" required>
 
                         <label class="text-primary" for="atm-up-doctorName">Nome do Médico: </label>
-                        <input type="text" id="atm-up-doctorName" class="form-control line-inputs border-primary mt-0 mb-3"
+                        <input type="text" maxlength="50" minlength="8" id="atm-up-doctorName" class="form-control line-inputs border-primary mt-0 mb-3"
                             asp-for="DoctorName" required>
 
                         <label class="text-primary" for="atm-up-dataAppoiment">Data da consulta: </label>

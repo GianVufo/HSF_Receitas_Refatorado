@@ -45,9 +45,9 @@
 
                         <input id="atc-up-prescriptionId" class="form-control mb-3 addRec-prescriptionId" type="hidden" asp-for="Id" disabled>
 
-                        <label class="text-primary" for="atc-up-pacientName">Nome do Paciente: </label> <input type="text" id="atc-up-pacientName" class="form-control line-inputs border-primary mt-0 mb-3" asp-for="PacientName" required>
+                        <label class="text-primary" for="atc-up-pacientName">Nome do Paciente: </label> <input type="text" maxlength="50" minlength="8" id="atc-up-pacientName" class="form-control line-inputs border-primary mt-0 mb-3" asp-for="PacientName" required>
 
-                        <label class="text-primary" for="atc-up-doctorName">Nome do Médico: </label> <input type="text" id="atc-up-doctorName" class="form-control line-inputs border-primary mt-0 mb-3"  asp-for="DoctorName" required>
+                        <label class="text-primary" for="atc-up-doctorName">Nome do Médico: </label> <input type="text" maxlength="50" minlength="8" id="atc-up-doctorName" class="form-control line-inputs border-primary mt-0 mb-3"  asp-for="DoctorName" required>
 
                         <label class="text-primary" for=" atc-up-dataAppoiment">Data da consulta: </label> <input type="date" id="atc-up-dataAppoiment" class="form-control line-inputs border-primary mt-0 mb-4" asp-for="DateOfMedicalAppoiment" required>
 
@@ -77,7 +77,7 @@
 
                 <div class="row button-prescription">
 
-                    @if (medicList.Count() >= 10)
+                    @if (medicList.Count() >= 8)
                     {
                         <button type="button" title="Máx. de medicamentos inseridos !" class="btn btn-sm btn-info btn-printer medic-btn" disabled> <span class="material-symbols-outlined"> syringe </span> Adicionar Medicamentos</button>
                     }else {
