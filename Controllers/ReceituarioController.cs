@@ -150,6 +150,55 @@ namespace Hsf_Receitas.Controllers
             }
         }
 
+        [HttpGet]
+        public IActionResult CreateBlankReport()
+        {
+            try
+            {
+                string reportFile = Path.Combine(_environment.WebRootPath, @"Print_Files\BlankPrescription.frx");
+
+                FastReport.Report r = new FastReport.Report();
+
+                r.Report.Save(reportFile);
+
+                return Ok($"OK! {reportFile}");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("Erro ao gerar report do receituário em branco comum via FastReporter !" + e.Message);
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+        [HttpGet]
+        public IActionResult BlankPrescriptionPrintToPDF()
+        {
+            try
+            {
+                string reportFile = Path.Combine(_environment.WebRootPath, @"Print_Files\BlankPrescription.frx");
+
+                FastReport.Report r = new FastReport.Report();
+
+                r.Report.Load(reportFile);
+
+                r.Prepare();
+
+                PDFSimpleExport pdfExport = new PDFSimpleExport();
+                using MemoryStream ms = new MemoryStream();
+
+                pdfExport.Export(r, ms);
+
+                ms.Flush();
+
+                return File(ms.ToArray(), "application/pdf");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("Erro ao gerar receita em PDF !" + e.Message);
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

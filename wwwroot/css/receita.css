@@ -241,7 +241,7 @@
     border-radius: 5px;
     align-items: center;
     color: #007bff;
-    font-size: 0.7em;
+    font-size: 1.8vh;
 }
 
 .inputs span {
@@ -369,6 +369,12 @@
     
 }
 
+.btn-blank[aria-label]:hover::after {
+    height: 10vh;
+    font-size: 0.8em;
+    
+}
+
 .alert p {
     display: flex;
     align-items: center;
@@ -395,6 +401,32 @@
     color: #fff;
 
 }
+
+.btn-blank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 33vh;
+    height: 10vh;
+    border-radius: 10vh;
+    box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.619);
+    background-color: #00afefc0;
+    border: 1px solid #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2.1vh;
+    margin-top: -40%;
+}
+
+.btn-blank:hover {
+  background-color: #00afefc0;
+  transform: translateY(-3px);
+  transition: ease-in-out 0.5s;
+  border: 1px solid #fff;
+}
+
+
 
 /*@media*/
 

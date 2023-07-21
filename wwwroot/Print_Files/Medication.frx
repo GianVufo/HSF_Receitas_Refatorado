@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="04/27/2023 13:40:31" ReportInfo.Modified="07/19/2023 17:58:11" ReportInfo.CreatorVersion="2023.1.0.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="04/27/2023 13:40:31" ReportInfo.Modified="07/21/2023 13:07:22" ReportInfo.CreatorVersion="2023.1.0.0">
   <Dictionary>
     <BusinessObjectDataSource Name="medicationList" ReferenceName="medicationList" DataType="System.Int32" Enabled="true">
       <Column Name="Id" DataType="System.Int32"/>
@@ -84,14 +84,14 @@
         </DataHeaderBand>
       </DataBand>
     </DataBand>
-    <PageFooterBand Name="PageFooter1" Top="261.08" Width="484.22" Height="75.6">
-      <TextObject Name="Text4" Left="56.7" Top="47.25" Width="349.65" Height="9.45" Text="    BR 040 - KM 438 - BRASÍLIA / BELO HORIZONTE - TEL.: (38) 3754-1256" HorzAlign="Center" Font="Times New Roman, 7pt" TextFill.Color="0, 120, 215"/>
+    <PageFooterBand Name="PageFooter1" Top="261.08" Width="484.22" Height="66.15">
+      <TextObject Name="Text4" Left="56.7" Top="37.8" Width="349.65" Height="9.45" Text="    BR 040 - KM 438 - BRASÍLIA / BELO HORIZONTE - TEL.: (38) 3754-1256" HorzAlign="Center" Font="Times New Roman, 7pt" TextFill.Color="0, 120, 215"/>
       <LineObject Name="Line4" Left="132.3" Top="18.9" Width="207.9" Border.Color="0, 120, 215"/>
       <TextObject Name="Text23" Left="151.2" Top="18.9" Width="170.1" Height="9.45" Text="Assinatura do médico" HorzAlign="Center" Font="Times New Roman, 7pt" TextFill.Color="0, 120, 215"/>
-      <TextObject Name="Text5" Left="47.25" Top="66.15" Width="170.1" Height="9.45" Text="PARQUE DIADORIM " HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 7pt, style=Bold" TextFill.Color="0, 120, 215"/>
-      <TextObject Name="Text6" Left="170.1" Top="66.15" Width="245.7" Height="9.45" Text="CEP: 39.205-000 - TRÊS MARIAS - MINAS GERAIS" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 7pt" TextFill.Color="0, 120, 215"/>
-      <TextObject Name="Text65" Left="179.55" Top="66.15" Width="9.45" Height="9.45" Border.Color="0, 120, 215" Text="-" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 7pt" TextFill.Color="0, 120, 215"/>
-      <LineObject Name="Line1" Left="9.45" Top="75.6" Width="463.05" Border.Color="0, 120, 215"/>
+      <TextObject Name="Text5" Left="47.25" Top="56.7" Width="170.1" Height="9.45" Text="PARQUE DIADORIM " HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 7pt, style=Bold" TextFill.Color="0, 120, 215"/>
+      <TextObject Name="Text6" Left="170.1" Top="56.7" Width="245.7" Height="9.45" Text="CEP: 39.205-000 - TRÊS MARIAS - MINAS GERAIS" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 7pt" TextFill.Color="0, 120, 215"/>
+      <TextObject Name="Text65" Left="179.55" Top="56.7" Width="9.45" Height="9.45" Border.Color="0, 120, 215" Text="-" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 7pt" TextFill.Color="0, 120, 215"/>
+      <LineObject Name="Line1" Left="9.45" Top="66.15" Width="463.05" Border.Color="0, 120, 215"/>
     </PageFooterBand>
   </ReportPage>
 </Report>

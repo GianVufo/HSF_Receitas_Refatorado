@@ -4,16 +4,20 @@
 
 <div class="main-div container-fluid mb-0">
 
+    <div class="col-md-5">
+        <a target="_blank" class="btn btn-primary btn-blank" aria-label="Imprima relatórios em branco !" href="/Receituario/BlankPrescriptionPrintToPDF"><span class="material-symbols-outlined mr-2"> note </span> Relatório em branco</a>
+    </div>
+
     <div class="btn-index-container">
 
-        <div class="btn-index">
+        <div class="btn-index mt-3">
             <a class="btn btn-primary" asp-controller="Receituario"
                 asp-action="Prescription"> <span
                     class="material-symbols-outlined"> medical_information
                 </span> Apenas Receituário </a>
         </div>
 
-        <div class="btn-index ml-5">
+        <div class="btn-index mt-3 ml-5">
             <a class="btn btn-primary" asp-controller="AtestadoMedico"
                 asp-action="ATMPrescription"> <span
                     class="material-symbols-outlined"> personal_injury </span>

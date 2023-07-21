@@ -12,13 +12,36 @@
     border: 2px solid #007bff;
     border-radius: 5px;
     color: #007bff;
-    margin-top: 3vh;
+    margin-top: 8vh;
+}
+
+.atm-card-footer {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vh;
 }
 
 .atm-title h1 {
     font-size: 3vh;
     font-weight: bold;
     margin-top: 1.5%;
+}
+
+.prescription-data-atm {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.prescription-data-atm article {
+    margin-top: 20vh;
 }
 
 .p1 {
