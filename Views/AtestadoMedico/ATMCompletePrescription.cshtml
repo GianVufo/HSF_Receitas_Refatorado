@@ -313,7 +313,7 @@
 
                 <h2 class="text-center mb-0"> Inserir Medicamento</h2>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" title="Fechar">
 
                     <span class="text-light" aria-hidden="true">&times;</span>
 
@@ -342,17 +342,19 @@
 
         <div class="modal-content">
 
-            <div class="modal-header text-center">
+            <div class="modal-header bg-primary text-light text-center">
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h2 class="text-center mb-0">Atestado Médico :</h2>
 
-                    <span aria-hidden="true">&times;</span>
+                <button type="button" class="close" data-dismiss="modal" title="Fechar">
+
+                    <span class="text-light" aria-hidden="true">&times;</span>
 
                 </button>
 
             </div>
 
-            <div class="modal-body p-2">
+            <div class="modal-body p-3">
                 @await Html.PartialAsync("/Views/AtestadoMedico/_ATMRegister.cshtml", @atm)
             </div>
 

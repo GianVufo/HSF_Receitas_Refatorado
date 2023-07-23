@@ -4,34 +4,30 @@
     ViewData["title"] = "Adicionar Atestado de Comparecimento";
 }
 
-<div class="col-md-12 atm mb-3">
+<div class="col-md-12">
 
     <form id="atc-form" class="atm-form">
 
-        <span class="mt-3 mb-3 alerta"></span>
+        <div class="card-body">
 
-        <div class="card medicine-card">
+            <span class="mt-3 mb-3 alerta"></span>
 
-            <h5 class="card-header text-center">Atestado de Comparecimento :</h5>
+            <input id="atcId" class="form-control mb-3" value="@Model.Id" type="hidden" asp-for="Id" disabled>
+            <input id="atc-receituarioId" class="form-control mb-3" type="hidden" asp-for="Id" disabled>
 
-            <div class="card-body">
+            <label class="text-primary" for="">Nome do Paciente: </label>
+            <input type="text" id="atc-pacientName" class="form-control medicament-inputs border-primary mb-3" asp-for="PacientName"
+            required>
 
-                <input id="atcId" class="form-control mb-3" value="@Model.Id" type="hidden" asp-for="Id" disabled>
+            <label class="text-primary" for="">Turno: </label>
+            <input type="text" id="atc-turn" class="form-control medicament-inputs border-primary mb-3" asp-for="Turno"
+            required>
 
-                <input id="atc-receituarioId" class="form-control mb-3" type="hidden" asp-for="Id" disabled>
+        </div>
 
-                <label class="text-primary" for="">Nome do Paciente: </label>
-                <input type="text" id="atc-pacientName" class="form-control border-primary mb-3" asp-for="PacientName"
-                required>
+        <div class="modal-footer m-0 p-0">
 
-                <label class="text-primary" for="">Turno: </label>
-                <input type="text" id="atc-turn" class="form-control border-primary mb-3" asp-for="Turno"
-                    required>
-
-                <button type="submit" title="Gerar atestado de comparecimento" class="btn btn-md btn-primary btn-printer"> <span
-                class="material-symbols-outlined"> save </span> Salvar </button>
-
-            </div>
+            <button type="submit" aria-label="Gerar atestado de Comparecimento !" class="btn btn-primary att-send-button btn-printer"> <span id="att-save-icon" class="material-symbols-outlined"> save </span> </button>
 
         </div>
 

@@ -188,7 +188,7 @@
 
                                 <div class="row">
 
-                                    <p class="p2-atc mr-3">Compareceu ao</p>
+                                    <p class="p2-atc mr-2">Compareceu ao</p>
 
                                     <div class="atc-MedicUnity">
 
@@ -200,10 +200,10 @@
 
                                 <div class="row">
 
-                                    <p class="p3 mb-0 mr-4">do</p>
+                                    <p class="p3 mb-0 mr-3">do</p>
 
                                     <div class="atc-Localidade">
-                                        <span class="">Hospital Municipal de Três Marias</span>
+                                        <span class="mb-0">Hospital Municipal de Três Marias</span>
                                     </div>
 
                                 </div>
@@ -304,7 +304,7 @@
 
                 <h2 class="text-center mb-0"> Inserir Medicamento</h2>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" title="Fechar">
 
                     <span class="text-light" aria-hidden="true">&times;</span>
 
@@ -333,17 +333,19 @@
 
         <div class="modal-content">
 
-            <div class="modal-header text-center">
+            <div class="modal-header bg-primary text-light text-center">
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h2 class="text-center mb-0">Atestado de Comparecimento :</h2>
 
-                    <span aria-hidden="true">&times;</span>
+                <button type="button" class="close" data-dismiss="modal" title="Fechar">
+
+                    <span class="text-light" aria-hidden="true">&times;</span>
 
                 </button>
 
             </div>
 
-            <div class="modal-body p-0">
+            <div class="modal-body p-3">
                 @await Html.PartialAsync("/Views/AtestadoComparecimento/_ATCRegister.cshtml", @atc)
             </div>
 

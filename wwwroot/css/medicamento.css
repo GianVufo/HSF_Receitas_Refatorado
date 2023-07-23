@@ -1,15 +1,11 @@
 .medicament {
- margin-bottom: 3vh;
- border: 2px solid #007bff;
- border-radius: 5px;
-}
-
-.medicament-form button {
-  margin-left: 40%;
+  margin-bottom: 3vh;
+  border: 2px solid #007bff;
+  border-radius: 5px;
 }
 
 .border-medic {
-  
+
   border-bottom: 1px dashed #007bff;
   font-size: 14px;
 }
@@ -65,15 +61,15 @@
   margin: 0%;
 }
 
-.medicament-atribbutes legend  {
+.medicament-atribbutes legend {
   font-size: 10.5pt;
 }
 
-.medicament-atribbutes input{
+.medicament-atribbutes input {
   font-size: 10pt;
 }
 
-.medicament-atribbutes input::placeholder{
+.medicament-atribbutes input::placeholder {
   font-size: 10pt;
 }
 
